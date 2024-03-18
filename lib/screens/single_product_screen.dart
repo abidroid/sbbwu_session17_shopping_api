@@ -3,6 +3,7 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:sbbwu_session17_shopping_api/models/product.dart';
 import 'package:http/http.dart' as http;
+import 'package:sbbwu_session17_shopping_api/screens/product_list_screen.dart';
 
 class SingleProductScreen extends StatefulWidget {
   const SingleProductScreen({super.key});
@@ -69,7 +70,9 @@ class _SingleProductScreenState extends State<SingleProductScreen> {
                   Text('Rating: ${product.rating!.rate!}'),
                   const Divider(),
                   TextButton(onPressed: (){
-
+                    Navigator.of(context).push(MaterialPageRoute(builder: (context){
+                      return const ProductListScreen();
+                    }));
                   }, child: const Text('View All'))
 
                 ],
