@@ -19,7 +19,7 @@ class ProductListItem extends StatelessWidget {
         }));
       },
       child: Card(
-        color: Colors.lightGreen,
+        color: Colors.yellow,
         child: Padding(
           padding: const EdgeInsets.all(8.0),
           child: Row(
